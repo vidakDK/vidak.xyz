@@ -50,7 +50,7 @@ view :
     -> (subMsg -> msg)
     -> Browser.Document msg
 view { title, content } toSubMsg =
-    Browser.Document ("Taranusaurus | " ++ title)
+    Browser.Document ("Vidak | " ++ title)
         [ Icon.css
         , layout
             [ Font.color colors.black

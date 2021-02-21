@@ -78,7 +78,7 @@ changeRouteTo maybeRoute model =
             ( Index <| Index.init session, Cmd.none )
 
         Just Route.Decree ->
-            ( Index <| Index.init session, Cmd.none )
+            ( Decree <| Decree.init session, Cmd.none )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )

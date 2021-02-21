@@ -16,7 +16,8 @@ type Route
 parser : Parser.Parser (Route -> a) a
 parser =
     Parser.oneOf
-        [ route Index Parser.top
+        [ route Decree Parser.top
+        , route Decree (Parser.s "decree")
         ]
 
 

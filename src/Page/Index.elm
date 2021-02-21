@@ -52,28 +52,30 @@ edges =
 view : Model -> { title : String, content : Element Msg }
 view model =
     let
-        navEntry level =
-            viewLink level model.activeLink
-
-        rootEntry =
-            navEntry 0
+        link =
+            viewLink model.activeLink
     in
-    { title = "quod erat demonstrandum"
+    { title = "Home"
     , content =
-        column [ spacing 7 ]
-            [ rootEntry "/decree" "Decree"
+        textColumn [ alignTop, spacing 20 ]
+            [ paragraph [ Font.size 28, Font.bold ] [ text "Hello" ]
+            , paragraph []
+                [ image []
+                    { src = "static/img/cogs.gif"
+                    , description = "cogs"
+                    }
+                ]
             ]
     }
 
 
-viewLink : Int -> Maybe String -> String -> String -> Element Msg
-viewLink level activeLink url page =
+viewLink : Maybe String -> String -> String -> Element Msg
+viewLink activeLink url page =
     let
         baseAttributes =
             [ Font.color Page.colors.link
             , Events.onMouseEnter (HoveredLink page)
             , Events.onMouseLeave UnHoveredLink
-            , paddingEach { edges | left = 40 * level }
             ]
 
         attributes =
