@@ -30,9 +30,15 @@ initialModel : Session.Session -> Model
 initialModel session =
     { session = session
     , courses =
-        [ { name = "MIT 6.006: Introduction to Algorithms"
+        [ { name = "Berklee Introduction to Music Theory"
+          , link = "https://courses.edx.org/courses/course-v1:BerkleeX+OHARM100x+1T2021"
+          , progress = 15
+          , grade = ""
+          , year = "2021"
+          }
+        , { name = "MIT 6.006: Introduction to Algorithms"
           , link = "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/"
-          , progress = 20
+          , progress = 25
           , grade = ""
           , year = "2021"
           }
@@ -42,9 +48,9 @@ initialModel session =
           , grade = ""
           , year = "2021"
           }
-        , { name = "Shanghai Jiao Tong University: Mandarine Chinese 1"
+        , { name = "Shanghai Jiao Tong University: Mandarin Chinese 1"
           , link = "https://www.coursera.org/learn/mandarin-chinese-1/home/welcome"
-          , progress = 60
+          , progress = 65
           , grade = ""
           , year = "2021"
           }
@@ -110,6 +116,10 @@ colours =
     , darkGrey = rgb 0.212 0.212 0.216
     , white = rgb 0.99 0.99 0.973
     }
+
+
+edges =
+    { top = 0, right = 0, bottom = 0, left = 0 }
 
 
 view : Model -> { title : String, content : Element Msg }
@@ -178,7 +188,7 @@ viewProgress progress =
             , el
                 [ height <| px maxHeight
                 , width <| px (maxWidth - doneWidth)
-                , Border.width 1
+                , Border.widthEach { edges | top = 1, bottom = 1, right = 1 }
                 ]
                 none
             ]
