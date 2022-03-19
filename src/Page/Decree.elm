@@ -30,16 +30,40 @@ initialModel : Session.Session -> Model
 initialModel session =
     { session = session
     , courses =
-        [ { name = "Berklee Introduction to Music Theory"
-          , link = "https://courses.edx.org/courses/course-v1:BerkleeX+OHARM100x+1T2021"
-          , progress = 15
+        [ { name = "MIT 6.006: Introduction to Algorithms"
+          , link = "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/index.htm"
+          , progress = 80
           , grade = ""
-          , year = "2021"
+          , year = "2022"
           }
-        , { name = "MIT 6.006: Introduction to Algorithms"
-          , link = "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/"
-          , progress = 25
+        , { name = "MIT 18.404J Theory of Computation"
+          , link = "https://ocw.mit.edu/courses/mathematics/18-404j-theory-of-computation-fall-2020/index.htm"
+          , progress = 5
           , grade = ""
+          , year = "2022"
+          }
+        , { name = "MIT 6.004 Computation Structures"
+          , link = "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017/"
+          , progress = 1
+          , grade = ""
+          , year = "2022"
+          }
+        , { name = "MIT 6046J Design and Analysis of Algorithms"
+          , link = "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm"
+          , progress = 1
+          , grade = ""
+          , year = "2022"
+          }
+        , { name = "MIT 6.851 Advanced Data Structures"
+          , link = "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/"
+          , progress = 1
+          , grade = ""
+          , year = "2022"
+          }
+        , { name = "MIT 6.431x: Probability - The Science of Uncertainty and Data"
+          , link = "https://learning.edx.org/course/course-v1:MITx+6.431x+3T2018/home"
+          , progress = 100
+          , grade = "95%"
           , year = "2021"
           }
         , { name = "NVIDIA: Fundamentals of Accelerated Computing with CUDA C/C++"
@@ -77,6 +101,12 @@ initialModel session =
           , progress = 5
           , grade = ""
           , year = "2019"
+          }
+        , { name = "Machine Learning by Stanford University"
+          , link = "https://www.coursera.org/learn/machine-learning/home/welcome"
+          , progress = 100
+          , grade = "100%"
+          , year = "2017"
           }
         ]
     }
